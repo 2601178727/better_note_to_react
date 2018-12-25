@@ -10,11 +10,13 @@ module.exports = {
     rules: [
       {
         test: /\.js$/, // 以js结尾的文件
+        exclude: /node_modules/, // 忽略node_modules
+        include: path.resolve('src'), // 只解析src下面的文件
         use: {
           loader: 'babel-loader',
           options: {
-            preset: [
-              'env', 'stage-0', 'react'
+            presets: [
+              "env", "stage-0", "react"
             ]
           }
         }

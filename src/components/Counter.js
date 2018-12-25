@@ -5,7 +5,7 @@ export default class Counter extends Component{
   static defaultProps = { // 默认属性对象
     count: 0
   }
-  constructor (props) {
+  constructor (props) { // 内部可以生命状态、获取属性
     super(props);
     this.state = {count: this.props.count};
   }

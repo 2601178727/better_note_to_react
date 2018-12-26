@@ -4,13 +4,16 @@
 > npm init -y
 
 ###### 下载依赖
-> cnom i webpack-dev-server -D
+> cnpm i webpack-dev-server -D
 > cnpm i react react-dom babel-core babel-loader@7 babel-preset-env babel-preset-stage-0 babel-preset-react html-webpack-plugin css-loader style-loader file-loader url-loader webpack webpack-cli -D
+>
+> cnpm i stylus stylus-loader -D
+>
 > babel-preset-stage-0 解析es7
 
 
 ###### 创建webpack配置文件
-```
+```javas
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
@@ -33,6 +36,16 @@ module.exports = {
             ]
           }
         }
+      },
+      { // 配置stylus
+        test: /\.styl$/, // 以styl结尾的文件
+        exclude: /node_modules/, // 忽略node_modules
+        include: path.resolve('src'), // 只解析src下面的文件
+        use: [
+          require.resolve('style-loader'),
+          require.resolve('css-loader'),
+          require.resolve('stylus-loader'),
+        ]
       }
     ]
   },

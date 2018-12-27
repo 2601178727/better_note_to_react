@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Page from './components/Page.js';
+import Todos from './components/Todos.js';
 
-ReactDom.render(<Page />, document.querySelector('#root'));
+ReactDom.render(<Todos />, document.querySelector('#root'));

@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Todos from './components/Todos.js';
+import Imu from './components/Imu.js';
 
-ReactDom.render(<Todos />, document.querySelector('#root'));
+ReactDom.render(<Imu />, document.querySelector('#root'));

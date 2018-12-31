@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Counter from './components/Counter.js';
+import HomePage from './components/HomePage.js';
 
-ReactDom.render(<Counter/>, document.querySelector('#root'));
+ReactDom.render(<HomePage/>, document.querySelector('#root'));

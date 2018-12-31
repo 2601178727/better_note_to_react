@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Counter from './components/Counter.js';
+import Main from './components/DOMDiff.js';
 
-ReactDom.render(<Counter/>, document.querySelector('#root'));
+ReactDom.render(<Main/>, document.querySelector('#root'));

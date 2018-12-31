@@ -1,5 +1,18 @@
 import React, {Component} from 'react';
 class Counter extends Component{
+  constructor() {
+    super();
+    this.ts = new Date().toLocaleString();
+  }
+  componentWillUnmount () {
+    console.log(this.ts + 'componentWillUnmount');
+  }
+  componentWillMount () {
+    console.log(this.ts + 'componentWillMount');
+  }
+  componentDidMount () {
+    console.log(this.ts + 'componentDidMount');
+  }
   render () {
     return (
       <div>Counter</div>

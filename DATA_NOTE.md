@@ -20,5 +20,5 @@
 > 方便回溯 => 用一个新数组接收
 > 样例 Imu.js
 
-
+###### 优化shouldComponentUpdate方法
 

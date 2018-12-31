@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import {List} from 'immutable';
+import { is } from 'immutable';
 
 class PureComponent extends Component{
   shouldComponentUpdate(nextProps, nextState) {
+    // is判断两个 immutable对象是否相等
+    return (is(nextProps, this.prop) && is(nextState, this.state));
     // 循环新属性和新状态，判断新旧值是否相同
     // 属于浅比较 即只能比较地址 不能比较数组中的值变化
     // 如果把这里改为深比较，消耗内存
-    for(let prop in nextProps) {
+    /* for(let prop in nextProps) {
       if (nextProps[prop] !== this.props[prop]) {
         return true;
       }
@@ -16,7 +19,7 @@ class PureComponent extends Component{
         return true;
       }
     }
-    return false;
+    return false; */
   }
 }
 export default class Imu extends Component{

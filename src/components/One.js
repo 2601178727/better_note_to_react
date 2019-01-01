@@ -13,12 +13,12 @@ export default function(OldComponent) {
     }
    componentDidMount () {
      fetch('/user.json').then(response => response.json()).then(user => {
-      this.setState({data: user[name] || placeholder});
+      this.setState({data: user[this.props.data] || this.props.placeholder});
      });
    }
    save = (event) =>{
      this.setState({data: event.target.value});
-     localStorage.setItem(name, event.target.value);
+     localStorage.setItem(this.props.data, event.target.value);
    }
    render () {
      return <OldComponent data={this.state.data} save={this.save}/>

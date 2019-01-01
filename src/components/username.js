@@ -1,11 +1,8 @@
 import React, {Component} from 'react';
-import Ajax from './ajax';
+import One from './One';
+import Second from './Second';
 
 class UserName extends Component{
-  handleClick = (e) => {
-    e.preventDefault();
-    console.log(this.props.data);
-  }
   render() {
     return (
       <label>
@@ -16,4 +13,11 @@ class UserName extends Component{
   }
 }
 
-export default Ajax(UserName, 'username');
+/**
+ * 实现加载数据的时候，先从localStorage 里取到一个key，然后再从接口里取出这个key的值进行显示
+ * 封装从里向外封装，执行从外向里执行
+ */
+UserName = One(UserName);
+UserName = Second(UserName, 'username', '用户名');
+
+export default UserName;

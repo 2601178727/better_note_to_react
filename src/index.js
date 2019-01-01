@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import Counter from './components/Counter.js';
+import Model from './components/ModelPage.js';
 
-ReactDom.render(<Counter/>, document.querySelector('#root'));
+ReactDom.render(<Model/>, document.querySelector('#root'));

@@ -6,6 +6,7 @@ module.exports = {
     path: path.resolve('dist'), // 出口路径
     filename: 'app.js' // 出口文件名
   },
+  devtool: 'source-map', // 编译不压缩
   module: {
     rules: [
       {

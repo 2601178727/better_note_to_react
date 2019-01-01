@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Local from './local';
+import Ajax from './ajax';
 
 class UserName extends Component{
   handleClick = (e) => {
@@ -16,4 +16,4 @@ class UserName extends Component{
   }
 }
 
-export default Local(UserName, 'username');
+export default Ajax(UserName, 'username');

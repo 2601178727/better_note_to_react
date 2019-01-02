@@ -1,7 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-  entry: './src/index.js', // 入口
+  entry: './src/router/index.js', // 入口
   output: {
     path: path.resolve('dist'), // 出口路径
     filename: 'app.js' // 出口文件名
@@ -11,7 +11,7 @@ module.exports = {
       {
         test: /\.js$/, // 以js结尾的文件
         exclude: /node_modules/, // 忽略node_modules
-        include: path.resolve('src'), // 只解析src下面的文件
+        include: path.resolve('src/router'), // 只解析src下面的文件
         use: {
           loader: 'babel-loader',
           options: {

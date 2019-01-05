@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 // HashRouter 通过路径的哈希值变量实现
 // BrowserRouter 应用html5的history API实现
-import {HashRouter as Router, Route} from './react-router-dom';
+import {HashRouter as Router, Route, Link} from 'react-router-dom';
 
 /**
  * 测试驱动开发
@@ -19,6 +19,17 @@ ReactDOM.render(
   <Router>
     {/* route只能有一个根元素 */}
     <div>
+      <ul>
+        <li>
+          <Link to="/home">首页</Link>
+        </li>
+        <li>
+          <Link to="/user">用户</Link>
+        </li>
+        <li>
+          <Link to="/profile">个人</Link>
+        </li>
+      </ul>
       <Route path="/home" component={Home}/>
       <Route path="/user" component={User}/>
       <Route path="/profile" component={Profile}/>

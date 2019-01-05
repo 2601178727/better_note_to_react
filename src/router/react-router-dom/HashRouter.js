@@ -17,7 +17,7 @@ export default class HashRouter extends Component{
   componentDidMount() {
     window.location.hash = window.location.hash || '/';
     let render = () => {
-      this.setState();
+      this.setState({});
     }
     window.addEventListener('hashchange', render);
   }

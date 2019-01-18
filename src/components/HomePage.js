@@ -13,23 +13,27 @@ import PropTypes from 'prop-types'; // 引入类型模块
 export default class HomePage extends Component{
   static childContextTypes = {
     color: PropTypes.string,
+    text: PropTypes.string,
     setColor: PropTypes.func
   }
   
   getChildContext() {
     return {
       color: this.state.color,
+      text: this.state.text,
       setColor: this.setColor
     }
   }
   // 状态属于私有属性，只能自己改，需要对外暴露一个方法
   setColor = (color) => {
     this.setState({color})
+    this.setState({text: color})
   }
   constructor() {
     super()
     this.state = {
-      color: 'red'
+      color: 'red',
+      text: ''
     }
   }
   render() {

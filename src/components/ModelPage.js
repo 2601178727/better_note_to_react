@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Modal from './Modal';
+import Modal from './Modal_two';
 import './modal.css';
 
 export default class ModelPage extends Component{
@@ -9,6 +9,9 @@ export default class ModelPage extends Component{
   }
   handleClick = () => {
     this.setState({show: !this.state.show});
+    setTimeout(() => {
+      this.setState({show: !this.state.show});
+    }, 1000);
   }
   render() {
     return (

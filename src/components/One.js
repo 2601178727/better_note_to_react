@@ -16,7 +16,7 @@ export default function(OldComponent) {
       this.setState({data: user[this.props.data] || this.props.placeholder});
      });
    }
-   save = (event) =>{
+   save = (event) => {
      this.setState({data: event.target.value});
      localStorage.setItem(this.props.data, event.target.value);
    }
